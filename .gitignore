@@ -1,1 +1,15 @@
+# Data, because it is confidential :-)
 data/
+pix/
+
+# Ignore temporal R files
+.RData
+.Rhistory
+
+# Ignore dist directory
+dist/
+
+# Ignora Pajek-generated files
+pajek.ini
+rep*.rep
+log*.txt
