@@ -55,7 +55,7 @@ Clone the `master` branch, it is always pointing to the latest stable version of
 4. Load the scripts:
 	
 	```R
-	> source("tempnet.R")
+	> source("sociometry.R")
 	```
 	
 5. Success! You are ready to run the scripts!
