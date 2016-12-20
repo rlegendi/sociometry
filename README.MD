@@ -7,7 +7,7 @@ Clone the `master` branch, it is always pointing to the latest stable version of
 1. Download the source code or clone the repository:
 	
 	```bash
-	$ git clone http://github.com/rlegendi/tempnet
+	$ git clone http://github.com/rlegendi/sociometry
 	```
 	
 2. Go to the `src` directory and start R or Rgui from the command line:
