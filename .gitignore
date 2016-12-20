@@ -1,5 +1,6 @@
 # Data, because it is confidential :-)
-data/
+data/*
+!data/sample.csv
 pix/
 
 # Ignore temporal R files
