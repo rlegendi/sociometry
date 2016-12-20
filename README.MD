@@ -47,7 +47,7 @@ Clone the `master` branch, it is always pointing to the latest stable version of
 3. *(Optional)* Run the tests to verify that everything is working as expected. This steps requires the installation of the `testthat` package.
 	
 	```R
-	> source("sociometry-test.R")
+	> test_file("sociometry-test.R")
 	```
 	
 	In case you encounter any issues we are ready to help. Note that the authors of the `testthat` package are funny guys so sometimes you might encounter a few smileys or jokes in the test output :-)
@@ -55,7 +55,7 @@ Clone the `master` branch, it is always pointing to the latest stable version of
 4. Load the scripts:
 	
 	```R
-	> test_file("sociometry-test.R")
+	> source("sociometry.R")
 	```
 	
 5. Success! You are ready to run the scripts!
