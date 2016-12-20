@@ -47,7 +47,7 @@ Clone the `master` branch, it is always pointing to the latest stable version of
 3. *(Optional)* Run the tests to verify that everything is working as expected. This steps requires the installation of the `testthat` package.
 	
 	```R
-	> source("test.R")
+	> source("sociometry-test.R")
 	```
 	
 	In case you encounter any issues we are ready to help. Note that the authors of the `testthat` package are funny guys so sometimes you might encounter a few smileys or jokes in the test output :-)
@@ -55,15 +55,12 @@ Clone the `master` branch, it is always pointing to the latest stable version of
 4. Load the scripts:
 	
 	```R
-	> source("sociometry.R")
+	> test_file("sociometry-test.R")
 	```
 	
 5. Success! You are ready to run the scripts!
 
 ## Input files
 
-File content should have the following format (order of the columns is irrelevant):
+See `data/sample.csv` for details about the input format (order of the columns is irrelevant).
 
-	...
-
-## TODO
