@@ -50,7 +50,7 @@ log <- function(msg) {
 # Pre-condition: CSV file must contain a header (exactly 1 line)
 # Returns: the read data
 readCsv <- function(csvName) {
-	read.csv(file=file.path(DATA_DIR, csvName), head=TRUE, as.is=TRUE, sep=CSV_SEPARATOR)
+	read.csv(file=file.path(DATA_DIR, csvName), head=TRUE, as.is=TRUE, sep=CSV_SEPARATOR, strip.white=TRUE)
 }
 
 ### Graphing methods
@@ -77,15 +77,15 @@ plotGraph <- function(relations, title, showLabels) {
 }
 
 plotLeads <- function(csv, showLabels) {
-	rel <- data.frame(from=csv[, "Your.name."], to=csv[,"Who.would.you.choose.to.lead.you."])
+	rel <- data.frame(from = csv[, "Your.name."], to = csv[,"Who.would.you.choose.to.lead.you."])
 	
 	plotGraph(rel, "Leads", showLabels)
 }
 
 plotWork <- function(csv, showLabels) {
 	rel <- data.frame(
-			from=c(rep(csv[,"Your.name."], 4)),
-			to =c(
+			from = c(rep(csv[,"Your.name."], 4)),
+			to = c(
 					csv[, "Who.would.you.choose.to.lead.you."],
 					csv[, "Who.would.you.choose.to..be.with.you.on.a.four.member.team..Name.1"],
 					csv[, "Name.2"],
@@ -97,8 +97,8 @@ plotWork <- function(csv, showLabels) {
 
 plotFun <- function(csv, showLabels) {
 	rel <- data.frame(
-			from=c(rep(csv[,"Your.name."], 3)),
-			to =c(
+			from = c(rep(csv[,"Your.name."], 3)),
+			to = c(
 					csv[, "Who.would.you.hang.out.with.just.for.fun..Name.1"],
 					csv[, "Name.22"],
 					csv[, "Name.32"]
@@ -109,8 +109,8 @@ plotFun <- function(csv, showLabels) {
 
 plotAll <- function(csv, showLabels) {
 	rel <- data.frame(
-			from=c(rep(csv[,"Your.name."], 7)),
-			to=c(
+			from = c(rep(csv[,"Your.name."], 7)),
+			to = c(
 					csv[, "Who.would.you.choose.to.lead.you."],
 					csv[, "Who.would.you.choose.to..be.with.you.on.a.four.member.team..Name.1"],
 					csv[, "Name.2"],
@@ -125,7 +125,7 @@ plotAll <- function(csv, showLabels) {
 
 ### Processing
 
-csv <- readCsv("Sociometry - 2016Q4.csv")
+csv <- readCsv("Sociometry - 2017H1.csv")
 
 for (showLabels in c(TRUE, FALSE)) {
 	plotLeads(csv, showLabels)
