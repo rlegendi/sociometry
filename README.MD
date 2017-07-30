@@ -10,10 +10,10 @@ Clone the `master` branch, it is always pointing to the latest stable version of
 	$ git clone http://github.com/rlegendi/sociometry
 	```
 	
-2. Go to the `src` directory and start R or Rgui from the command line:
+2. Go to the `sociometry` directory and start R or Rgui from the command line:
 
 	```bash
-	$ cd src
+	$ cd sociometry
 	$ R
 	R version 2.15.1 (2012-06-22) -- "Roasted Marshmallows"
 	
@@ -43,8 +43,14 @@ Clone the `master` branch, it is always pointing to the latest stable version of
 	```R
 	> setwd("c:/007/work/eclipse_ws_r/sociometry")
 	```
-	
-3. *(Optional)* Run the tests to verify that everything is working as expected. This steps requires the installation of the `testthat` package.
+
+3. Install dependencies if not yet available in your environment:
+
+	```bash
+	> install.packages("igraph")
+	```
+
+4. *(Optional)* Run the tests to verify that everything is working as expected. This steps requires the installation of the `testthat` package.
 	
 	```R
 	> test_file("sociometry-test.R")
@@ -52,15 +58,14 @@ Clone the `master` branch, it is always pointing to the latest stable version of
 	
 	In case you encounter any issues we are ready to help. Note that the authors of the `testthat` package are funny guys so sometimes you might encounter a few smileys or jokes in the test output :-)
 	
-4. Load the scripts:
+5. Load the scripts:
 	
 	```R
 	> source("sociometry.R")
 	```
 	
-5. Success! You are ready to run the scripts!
+6. Success! You are ready to run the scripts!
 
 ## Input files
 
 See `data/sample.csv` for details about the input format (order of the columns is irrelevant).
-
